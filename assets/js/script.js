@@ -13,7 +13,8 @@ $("body").css("background", randomColor());
 $(document).ready(function(){
 	$.getJSON("http://api.chrisvalleskey.com/fillerama/get.php?count=100&format=json&show=futurama", function(json){
 		var jsonData = json;
-		$(".quote").text(jsonData["db"][0].quote);
-		// console.log(jsonData["db"][0].quote);
+		$(".quote-text").text(jsonData["db"][0].quote);
+		$(".quote-person").text(jsonData["db"][0].source);
+
 	});
 });
