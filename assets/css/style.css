@@ -1,11 +1,12 @@
-html,
 body {
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
 	font-size: 14px;
 	font-family: "Source Sans Pro", Arial, sans-serif;
-	color: #000;
+	background: #ef32d9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ef32d9, #89fffd); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ef32d9, #89fffd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .quote-box {
@@ -15,18 +16,107 @@ body {
 	display: -o-flex;
 	display: flex;
 	flex-direction: column;
-	border-radius: 3px;
+	border-radius: 10px;
 	position: relative;
 	margin: 8% auto auto auto;
 	width: 450px;
 	padding: 40px 50px;
-	background-color: #fff;
+	background-color: rgba(0,0,0,0.4);
+	-webkit-box-shadow: 10px 10px 55px -10px rgba(0,0,0,0.58);
+	-moz-box-shadow: 10px 10px 55px -10px rgba(0,0,0,0.58);
+	box-shadow: 10px 10px 55px -10px rgba(0,0,0,0.58);
 }
 .quote-box p {
 	font-size: 2rem;
+	color: #ECDF07;
 }
 
 .quote-box .quote-person {
 	align-self: flex-end;
+	color: #fff;
 }
 
+.buttons-wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn {
+	background-color:#5c89c4;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;;
+	outline: none;
+}
+.btn:hover {
+	background-color:#476e9e;
+	outline: none;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+	outline: none;
+}
+
+/*.btn {
+	display: inline-block;
+	font-weight: 700;
+	text-align: center;
+	background: #2f7fe1;
+	background: -webkit-linear-gradient(top,#549cf6 0%, #2f7fe1 100%);
+	background: linear-gradient(to bottom,#549cf6 0%, #2f7fe1 100%);
+	transition: all .2s ease-in-out;
+	color: #fff;
+	outline: 0 none;
+	padding: 20px 28px;
+	font-size: 14px;
+	line-height: 100%;
+	border-radius: 50px;
+	box-sizing: border-box;
+	border: none;
+	cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+	background: #2161b0;
+}*/
+
+@media screen and (max-width: 768px) {
+	.quote-box {
+		width: 300px;
+	}
+
+	.btn {
+		padding: 8px 16px;
+		font-size: 14px;
+	}
+
+	.quote-box p {
+		font-size: 1.5rem;
+		color: #ECDF07;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.quote-box {
+		width: 200px;
+	}
+
+	.btn {
+		padding: 6px 12px;
+		font-size: 12px;
+	}
+}
