@@ -2,7 +2,7 @@ $(document).ready(function(){
 	randomQuote();
 
 	function randomQuote() {
-		$.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?", function(json){
+		$.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?", function(json){
 			var jsonData = json;
 			$(".quote-text").text(jsonData.quoteText);
 			$(".quote-person").text(jsonData.quoteAuthor);
@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 
 
-/* BACHUP RANDOM COLOR BACKGROUND */
+/* BACKUP RANDOM COLOR BACKGROUND */
 
 
 // function randomColorGenerator(){
