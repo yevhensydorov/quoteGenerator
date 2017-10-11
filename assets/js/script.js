@@ -2,10 +2,10 @@ $(document).ready(function(){
 	randomQuote();
 
 	function randomQuote() {
-		$.getJSON("http://api.chrisvalleskey.com/fillerama/get.php?count=100&format=json&show=starwars", function(json){
+		$.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?", function(json){
 			var jsonData = json;
-			$(".quote-text").text(jsonData["db"][0].quote);
-			$(".quote-person").text(jsonData["db"][0].source);
+			$(".quote-text").text(jsonData.quoteText);
+			$(".quote-person").text(jsonData.quoteAuthor);
 
 			quoteText = $(".quote-text").html();
 			quoteAuthor = $(".quote-person").html();
@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 
 
-
+/* BACHUP RANDOM COLOR BACKGROUND */
 
 
 // function randomColorGenerator(){
